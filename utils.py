@@ -1,7 +1,5 @@
 from database import obtener_conexion
 from tkinter import filedialog
-from PIL import Image, ImageDraw, ImageFont
-import os
 from datetime import datetime
 
 
