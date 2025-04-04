@@ -4,7 +4,6 @@ def conectar_db():
     conn = sqlite3.connect('mi_aplicacion.db')
     cursor = conn.cursor()
     
-    # Crear tablas
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS clientes (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -14,7 +13,6 @@ def conectar_db():
     )
     ''')
 
-    # Modificación de la tabla stock
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS stock (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -24,7 +22,7 @@ def conectar_db():
         minimo INTEGER
     )
     ''')
-
+    #hay que limpiar la tabla
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS pedidos (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
